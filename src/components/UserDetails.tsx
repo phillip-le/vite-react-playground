@@ -3,15 +3,14 @@ import { useNavigate, useParams } from "react-router-dom";
 import { userData } from "../data/userData";
 
 export const UserDetails: FC = () => {
-  const { userId } = useParams();
   const navigate = useNavigate();
 
+  const { userId } = useParams();
   if (!userId) {
     return <p>404</p>;
   }
 
   const user = userData.find(({ id }) => id === userId);
-
   if (!user) {
     return <p>404</p>;
   }
