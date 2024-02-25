@@ -1,26 +1,44 @@
-import { render } from "@testing-library/react";
+import {
+  render,
+  waitFor,
+  waitForElementToBeRemoved,
+} from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { UserDetails } from "./UserDetails";
 import { userData } from "../data/userData";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 describe("UserDetails", () => {
   it("should navigate back to / when clicking button", async () => {
+    console.log("happening");
+    const queryClient = new QueryClient();
     const user = userEvent.setup();
 
     const screen = render(
-      <MemoryRouter initialEntries={[`/user/${userData[0].id}`]}>
-        <Routes>
-          <Route path="/user/:userId" element={<UserDetails />} />
-          <Route path="/" element={<p>Dummy page</p>} />
-        </Routes>
-      </MemoryRouter>
+      <QueryClientProvider client={queryClient}>
+        <MemoryRouter initialEntries={[`/user/${userData[0].id}`]}>
+          <Routes>
+            <Route path="/user/:userId" element={<UserDetails />} />
+            <Route path="/" element={<p>Dummy page</p>} />
+          </Routes>
+        </MemoryRouter>
+      </QueryClientProvider>
     );
 
-    const buttonToClick = screen.getByRole("button");
+    await waitFor(
+      async () => {
+        const buttonToClick = screen.getByRole("button");
 
-    await user.click(buttonToClick);
+        await user.click(buttonToClick);
+      },
+      {
+        timeout: 2000,
+      }
+    );
 
-    expect(screen.getByText("Dummy page")).toBeVisible();
+    await waitFor(() => expect(screen.getByText("Dummy page")).toBeVisible(), {
+      timeout: 2000,
+    });
   });
 });

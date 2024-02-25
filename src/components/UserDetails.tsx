@@ -1,18 +1,35 @@
 import { FC } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { userData } from "../data/userData";
+import { User } from "../data/userData";
+import { useQuery } from "@tanstack/react-query";
+import { getUser } from "../api/getUser";
 
 export const UserDetails: FC = () => {
   const navigate = useNavigate();
 
   const { userId } = useParams();
+  console.log("🚀 ~ userId:", userId);
+
   if (!userId) {
-    return <p>404</p>;
+    throw new Error("Should not happen");
   }
 
-  const user = userData.find(({ id }) => id === userId);
-  if (!user) {
-    return <p>404</p>;
+  const {
+    data: user,
+    status,
+    error,
+  } = useQuery<User>({
+    queryKey: ["users", userId],
+    queryFn: () => getUser(userId),
+    retry: false,
+  });
+
+  if (status === "pending") {
+    return <p>Loading...</p>;
+  }
+
+  if (status === "error") {
+    return <p>Something went wrong {JSON.stringify(error)}</p>;
   }
 
   return (
