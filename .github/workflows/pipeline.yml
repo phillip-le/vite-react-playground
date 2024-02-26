@@ -1,12 +1,17 @@
-name: Run all the things
+name: Run test and deploy to GitHub pages
 
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
