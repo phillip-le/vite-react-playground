@@ -8,8 +8,6 @@ export const UserDetails: FC = () => {
   const navigate = useNavigate();
 
   const { userId } = useParams();
-  console.log("🚀 ~ userId:", userId);
-
   if (!userId) {
     throw new Error("Should not happen");
   }
@@ -38,7 +36,9 @@ export const UserDetails: FC = () => {
       <p>{user.name}</p>
       <button
         onClick={() => {
-          navigate("/");
+          navigate("../..", {
+            relative: "path",
+          });
         }}
       >
         Back to list

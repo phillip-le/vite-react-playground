@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.24.1",
-    "gaxios": "^6.3.0",
+    "axios": "^1.6.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.1"

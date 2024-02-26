@@ -9,7 +9,7 @@ type UserCardProps = {
 export const UserCard: FC<UserCardProps> = ({ user }) => (
   <div>
     <p>
-      <Link to={`/user/${user.id}`}>{user.name}</Link>
+      <Link to={`user/${user.id}`}>{user.name}</Link>
     </p>
   </div>
 );

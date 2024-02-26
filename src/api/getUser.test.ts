@@ -6,7 +6,7 @@ import { userData } from "../data/userData";
 describe("getUser", () => {
   it("should return the user if API returns 200", async () => {
     const scope = nock("https://jsonplaceholder.typicode.com")
-      .get("/posts?userId=1")
+      .get(`/users/${userData[0].id}`)
       .reply(200, userData[0]);
 
     const result = await getUser(userData[0].id);

@@ -6,8 +6,10 @@ import { UserList } from "./components/UserList";
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<UserList />} />
-      <Route path="/user/:userId" element={<UserDetails />} />
+      <Route path="vite-react-playground">
+        <Route index element={<UserList />} />
+        <Route path="user/:userId" element={<UserDetails />} />
+      </Route>
     </Routes>
   );
 };
