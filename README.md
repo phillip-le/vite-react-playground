@@ -13,6 +13,7 @@
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
 - [nock](https://github.com/nock/nock)
 - [msw](https://mswjs.io/)
+- [Playwright](https://playwright.dev/docs/intro)
 
 ## Usage
 
@@ -34,10 +35,16 @@ With `devbox`
 devbox shell
 ```
 
-Otherwise,
+Otherwise, install `node` dependencies
 
 ```sh
 ni
+```
+
+Install Playwright browsers
+
+```sh
+pnpm exec playwright install chromium
 ```
 
 ### Start the dev server

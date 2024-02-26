@@ -1,6 +1,10 @@
 {
   "packages": ["nodejs@20", "nodePackages.pnpm@latest"],
   "shell": {
-    "init_hook": ["pnpm -g add @antfu/ni", "ni"]
+    "init_hook": [
+      "pnpm -g add @antfu/ni",
+      "ni",
+      "pnpm exec playwright install chromium"
+    ]
   }
 }
