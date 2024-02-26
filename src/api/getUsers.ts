@@ -4,7 +4,7 @@ import { User } from "../data/userData";
 export const getUsers = async (): Promise<User[]> => {
   const response = await request({
     baseURL: "https://jsonplaceholder.typicode.com",
-    url: "/users/",
+    url: "/users",
     method: "GET",
     responseType: "json",
   });
