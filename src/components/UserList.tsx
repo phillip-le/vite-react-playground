@@ -18,5 +18,12 @@ export const UserList: FC = () => {
     return <p>Error!</p>;
   }
 
-  return users.map((user) => <UserCard key={user.id} user={user} />);
+  return (
+    <div>
+      <h1>Users</h1>
+      {users.map((user) => (
+        <UserCard key={user.id} user={user} />
+      ))}
+    </div>
+  );
 };

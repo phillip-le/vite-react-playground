@@ -5,12 +5,20 @@ import { UserList } from "./components/UserList";
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="vite-react-playground">
-        <Route index element={<UserList />} />
-        <Route path="user/:userId" element={<UserDetails />} />
-      </Route>
-    </Routes>
+    <div>
+      <Routes>
+        <Route path="vite-react-playground">
+          <Route index element={<UserList />} />
+          <Route path="user/:userId" element={<UserDetails />} />
+        </Route>
+      </Routes>
+      <br />
+      <p>
+        Powered by{" "}
+        <a href="https://jsonplaceholder.typicode.com">JSONPlaceholder</a>
+        {" ❤️"}
+      </p>
+    </div>
   );
 };
 
