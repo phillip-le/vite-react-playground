@@ -18,7 +18,7 @@
 
 ### Prerequisites
 
-[devbox](https://www.jetpack.io/devbox/docs/)
+- [devbox](https://www.jetpack.io/devbox/docs/)
 
 OR
 
