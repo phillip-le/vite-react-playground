@@ -1,0 +1,49 @@
+name: Run tests
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install pnpm and dependencies
+        uses: pnpm/action-setup@v3
+        with:
+          version: latest
+          run_install: true
+
+      - name: Run vitest
+        run: |
+          pnpm test
+
+  e2e-test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install pnpm and dependencies
+        uses: pnpm/action-setup@v3
+        with:
+          version: latest
+          run_install: true
+
+      - name: Install Playwright Browsers
+        run: pnpm exec playwright install --with-deps
+
+      - name: Run Playwright tests
+        run: pnpm exec playwright test
