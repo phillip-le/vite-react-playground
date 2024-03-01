@@ -1,8 +1,6 @@
 name: Run tests
 
-on:
-  pull_request:
-    types: [opened, reopened]
+on: pull_request
 
 jobs:
   test:
