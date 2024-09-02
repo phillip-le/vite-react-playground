@@ -70,8 +70,8 @@ importers:
         specifier: ^2.3.5
         version: 2.3.5(typescript@5.5.4)
       nock:
-        specifier: ^13.5.4
-        version: 13.5.4
+        specifier: ^13.5.5
+        version: 13.5.5
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
@@ -1330,8 +1330,8 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  nock@13.5.4:
-    resolution: {integrity: sha512-yAyTfdeNJGGBFxWdzSKCBYxs5FxLbCg5X5Q4ets974hcQzG1+qCxvIyOo4j2Ry6MUlhWVMX4OoYDefAIIwupjw==}
+  nock@13.5.5:
+    resolution: {integrity: sha512-XKYnqUrCwXC8DGG1xX4YH5yNIrlh9c065uaMZZHUoeUUINTOyt+x/G+ezYk0Ft6ExSREVIs+qBJDK503viTfFA==}
     engines: {node: '>= 10.13'}
 
   node-releases@2.0.14:
@@ -3109,9 +3109,9 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  nock@13.5.4:
+  nock@13.5.5:
     dependencies:
-      debug: 4.3.4
+      debug: 4.3.5
       json-stringify-safe: 5.0.1
       propagate: 2.0.1
     transitivePeerDependencies:
