@@ -70,8 +70,8 @@ importers:
         specifier: ^2.7.3
         version: 2.7.3(@types/node@22.13.14)(typescript@5.8.2)
       nock:
-        specifier: ^14.0.2
-        version: 14.0.2
+        specifier: ^14.0.3
+        version: 14.0.3
       typescript:
         specifier: ^5.8.2
         version: 5.8.2
@@ -473,8 +473,8 @@ packages:
     resolution: {integrity: sha512-wK+5pLK5XFmgtH3aQ2YVvA3HohS3xqV/OxuVOdNx9Wpnz7VE/fnC+e1A7ln6LFYeck7gOJ/dsZV6OLplOtAJ2w==}
     engines: {node: '>=18'}
 
-  '@mswjs/interceptors@0.38.0':
-    resolution: {integrity: sha512-nPHVM+LUl4V1kXPXuTcNN5OMD//ltCQ0lccuEagvidJdpbig3hP3W6/ctWHx6mee7vZIWE0L+Mqj3vx0ASlm/w==}
+  '@mswjs/interceptors@0.38.1':
+    resolution: {integrity: sha512-JWLtvwpj2aCk2UvLlSQ12BFF/wBJJd0NhhYf7cz4k+tMhymmLn8ss3irznjWPvOsASV2raqb5EjTw+NRoeVDag==}
     engines: {node: '>=18'}
 
   '@nodelib/fs.scandir@2.1.5':
@@ -1429,8 +1429,8 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  nock@14.0.2:
-    resolution: {integrity: sha512-jDUBpCNY7KLyOF2FTiT4mLRxV2kpjo4YrcGtv3IMCIwqFKxOQFrmeXefvuEiWvS3ApPWQHAkakkkVpoOrDNCVg==}
+  nock@14.0.3:
+    resolution: {integrity: sha512-sJ9RNmCuYBqXDmGZZHgZ1D1441MqFOU4T5aeLGVGEB4OWI/2LM0mZlkfBQzQKdOfJypL+2nPPBugXKjixBn4kQ==}
     engines: {node: '>=18.20.0 <20 || >=20.12.1'}
 
   node-releases@2.0.18:
@@ -2293,7 +2293,7 @@ snapshots:
       outvariant: 1.4.3
       strict-event-emitter: 0.5.1
 
-  '@mswjs/interceptors@0.38.0':
+  '@mswjs/interceptors@0.38.1':
     dependencies:
       '@open-draft/deferred-promise': 2.2.0
       '@open-draft/logger': 0.3.0
@@ -3279,9 +3279,9 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  nock@14.0.2:
+  nock@14.0.3:
     dependencies:
-      '@mswjs/interceptors': 0.38.0
+      '@mswjs/interceptors': 0.38.1
       json-stringify-safe: 5.0.1
       propagate: 2.0.1
     transitivePeerDependencies:
