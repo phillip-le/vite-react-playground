@@ -35,7 +35,7 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "jsdom": "^26.0.0",
     "msw": "^2.7.3",
-    "nock": "^14.0.2",
+    "nock": "^14.0.3",
     "typescript": "^5.8.2",
     "vite": "^6.2.5",
     "vitest": "^3.0.9"
