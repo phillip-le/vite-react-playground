@@ -70,8 +70,8 @@ importers:
         specifier: ^2.10.4
         version: 2.10.4(@types/node@24.2.0)(typescript@5.9.2)
       nock:
-        specifier: ^14.0.8
-        version: 14.0.8
+        specifier: ^14.0.9
+        version: 14.0.9
       typescript:
         specifier: ^5.9.2
         version: 5.9.2
@@ -1427,8 +1427,8 @@ packages:
   natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
 
-  nock@14.0.8:
-    resolution: {integrity: sha512-5DCGrkwK1f8kxUvqvzLWb97XuDUY4/t5M3ZcogPfLGvC2wO8wjRQsIDSXj2L6e1J0Dv8xscf9wWSvGnS3OL29Q==}
+  nock@14.0.9:
+    resolution: {integrity: sha512-aVIPgW9WVyb3XPCqfrwETc+hazxzgt8/QvARHAhC6BYHtTsZONUjlXoIB8EGmwqUBkKvOew4yqkGRBmwctdCrw==}
     engines: {node: '>=18.20.0 <20 || >=20.12.1'}
 
   node-releases@2.0.19:
@@ -3268,7 +3268,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  nock@14.0.8:
+  nock@14.0.9:
     dependencies:
       '@mswjs/interceptors': 0.39.5
       json-stringify-safe: 5.0.1
